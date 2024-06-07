@@ -120,6 +120,8 @@
  background:#fff;
  border:50px;
  border-color:orange ;
+
+  font-family:  Calendas Plus;
  
 }
 .hd{
@@ -197,7 +199,7 @@ text-transform: capitalize;
 <br>
              <div id="tblCustomers">
        <div align="center">
-       <div class="col-md-12 " >
+       <div class="col-ms-12 " >
        
 
 <%

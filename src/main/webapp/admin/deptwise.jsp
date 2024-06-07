@@ -94,7 +94,7 @@
 background-color:#fff;
  border:50px;
  border-color:orange ;
- 
+   font-family:  Calendas Plus;
 }
 .hd{
 background:pink ;

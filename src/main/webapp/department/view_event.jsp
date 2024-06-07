@@ -128,8 +128,10 @@
  
   .tab{
    background:#fff;
-   border: 10px;
+   border: 2.5px solid #032455;
   border-color:orange;
+  
+  font-family:  Calendas Plus;
  }
 .hd{
 background: pink;

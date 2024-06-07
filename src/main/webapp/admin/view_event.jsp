@@ -21,6 +21,7 @@
 }
 h3{
 color:#f44336;
+  font-family:  Calendas Plus;
 }
 .buttons {
     margin: 10%;
@@ -96,10 +97,11 @@ color:#f44336;
     background: #f44336;
    }
 .tab{
-background-color:#FFF;
- border:50px;
- border-color:orange ;
- 
+   background:#fff;
+   border: 2.5px solid #032455;
+  border-color:orange;
+  
+  font-family:  Calendas Plus;
 }
 .hd{
 background:pink ;

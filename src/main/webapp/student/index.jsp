@@ -103,6 +103,8 @@ color:#f44336;
  background:#fff;
  border:50px;
  border-color:orange ;
+   letter-spacing: 1px;
+  font-family:  Calendas Plus;
  
 }
 .hd{
@@ -164,6 +166,8 @@ text-transform: capitalize;
    h3{
    
    color: aqua;
+     letter-spacing: 1px;
+  font-family:  Calendas Plus;
    }         
 </style>
 </head>

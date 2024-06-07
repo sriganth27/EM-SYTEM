@@ -111,8 +111,10 @@
    }
 .tab{
  background:#fff;
- border:50px;
+ 
  border-color:orange ;
+ border: 2px solid orange ;
+  font-family:  Calendas Plus;
  
 }
 .hd{
