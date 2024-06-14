@@ -11,7 +11,10 @@
 <title>Index Page</title>
  <%@include file="component/allcss.jsp" %>
  <style>
-
+@font-face {
+    font-family: 'Anydore';
+    src: url('fonts/anydore.regular.otf') format('truetype');
+}
 .bg{
     background-color: #05012c;
 }
@@ -54,17 +57,24 @@
 
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 0.5rem;
 
-      font-family:  Calendas Plus;
+     font-family: 'Anydore', sans-serif;
+      src: url('/fonts/crafter-signature-serif.regular.ttf') format('truetype');
+        
+               
+           color: #c90d81;    
+              
      
- color:#FF00BF;
+ 
 }
+
+
 .hero p {
-    font-size: 1.2rem;
-    color: #ccc;
-        font-family:  Calendas Plus;
+    font-size: 1.5rem;
+   color: #62e0c7;
+   font-family: 'Anydore', sans-serif;
 }
 .hero button {
        font-size: 1.3rem;
@@ -87,8 +97,8 @@ background:#05012c;
 footer {
     background-color: #05012c;
       color: #c90d81;
-      font-family:  Calendas Plus;
-    padding: 0.3rem;
+font-family: 'Anydore', sans-serif;
+    padding: 0.6rem;
     text-align: center;
     clear: both;
     display: flex;
@@ -96,7 +106,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: 0px;
-    font-size: 20px;
+    font-size: 18px;
    
 }
 .footer-content {
@@ -115,18 +125,11 @@ footer {
     text-decoration: none;
     margin: 0 10px;
 }
-.footer-content a:hover {
-     background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
-}
 
 .tech-icon2 img {
     width: 2rem;
     height: 2rem;
     transition: all 0.3s ease;
- border-radius: 0.6rem;
-    background: transparent;
-    background-color: #000000;
-    border: 2.5px solid #8e0793;
   }
 
   .tech-icon2 .image-container {
@@ -150,12 +153,13 @@ footer {
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="img/std.jpg" class="d-block w-100" alt="..." height="250px">
     </div>
-    
+          
        <div class="carousel-item">
       <img src="img/7.jpg" class="d-block w-100" alt="..." height="250px">
     </div>
@@ -185,10 +189,10 @@ footer {
          
             <h1>Welcome to our Event Management System</h1>
             <p>Designed to streamline and enhance the event process within our college.</p>
-            <button class="btn">Explore Events</button>
+           
         </section>
         
-         <img src="img/Screenshot (209).png" class="d-block w-100"  alt="..." height="200px">
+         <img src="img/Screenshot (209).png" class="d-block w-100"  alt="..." height="220px">
     </div>
     <footer>
         <div class="footer-content">

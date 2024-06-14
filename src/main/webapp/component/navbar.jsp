@@ -7,7 +7,10 @@
 <%@page import="com.entity.department"%>
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+@font-face {
+    font-family: 'Anydore';
+    src: url('fonts/anydore.regular.otf') format('truetype');
+}
 .nav-item{
  padding: .2rem 2rem;
  font-size: 20px;
@@ -27,16 +30,20 @@
  box-shadow: 5px 5px 20px rgba(0, 0,0, .5);
 background :black;
 
+
 }
 .navbar .navbar-brand
 {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 800;
-    color: #fff
+     color: #2c9e87;
+         font-family: 'Anydore';
    
 }
 #navbarSupportedContent a{
     color: #fff;
+     
+       font-size: 18px;
     border-bottom: 2px solid transparent;
 }
 #navbarSupportedContent a:hover{
@@ -62,13 +69,14 @@ background:purple;
  font-family: cursive;
  font-style :inherit;
  text-transform: capitalize;
+
  
  }
   .d2{
  font-family: cursive;
  font-style :inherit;
  text-transform: capitalize;
- 
+
  }
  .imag{
  border-radius: 50%;

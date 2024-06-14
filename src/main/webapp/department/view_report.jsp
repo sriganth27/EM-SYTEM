@@ -24,6 +24,7 @@
 font-family: 'Times New Roman' , serif;
  text-transform: capitalize;
  font-size: 17px;
+ justify-content: center;
  }
 .ptext1{
 text-align: left;
@@ -90,6 +91,7 @@ font-weight: bold;
  background-color: buttonface;
 
  }
+
  </style>
 </head>
 <body class="bg">

@@ -22,8 +22,8 @@
   } 
   .tab{
 background-color:#fff;
-   border: 10px;
   border-color:orange;
+  border: 3px solid orange;
  }
 .hd{
 background: pink;
@@ -129,7 +129,12 @@ background: #064b35;
   right: 0rem;
   background: #064b35;
 
-}       
+} 
+.fs-3 {
+         font-family: Spectral;
+         
+ } 
+        
  </style>
   <script>
     function togglePasswordVisibility(cell) {

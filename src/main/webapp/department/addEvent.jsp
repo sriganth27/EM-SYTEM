@@ -134,6 +134,10 @@ color: #9698bc;
 font-weight:200px;
  text-transform: capitalize;
 } 
+.fs-3 {
+         font-family: Spectral;
+ } 
+  
  </style>
 </head>
 <body class="bg">

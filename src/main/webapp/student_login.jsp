@@ -10,6 +10,17 @@
  <%@include file="component/allcss.jsp" %>
   <style type="text/css">
   
+   @font-face {
+    font-family: 'Anydore';
+    src: url('../fonts/cf-savetana-demo.regular.otf') format('truetype');
+  
+   
+}
+
+.fs-3 {
+     font-family:Spectral, 'Anydore';
+ 
+ } 
    
   body{
   margin: 0;
@@ -53,7 +64,7 @@
   text-align: center;
   box-shadow: 0 20px 40px rgb(0,0,0);
 
-   border-radius:5%;
+   border-radius:1%;
 
   }
   .mb-3{
@@ -69,6 +80,7 @@
   border: none;
   background:#efefef ;
   padding-left: 50px;
+      font-family:Spectral, 'Anydore';
   }
   span{
   position: absolute;
@@ -90,26 +102,28 @@ background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
   display: block;
   color:#fff;
   border: 0;
-  font-size: 16px;
+  font-size: 19px;
   outline: none;
  background: rgb(120,0,123);
 background-image: linear-gradient(to top, #cc208e 0%, #6713d2 100%);
   box-shadow: 0 8px 10px -10px rgb(0,0,0);
   cursor: pointer;
+      font-family:Spectral, 'Anydore';
   }
   
   button .fa{
   margin-right: 10px;
   }
  .p1{
- text-transform:uppercase;
-  font-size: 30px;
+ text-transform:capitalize;
+  font-size: 40px;
   color: #fff;
   letter-spacing: 1px;
-    font-family: Spectral;
-  text-shadow: 0px 1px 0px #ccc;
+    font-family:Spectral, 'Anydore';
+
+             
               
-   
+}
    
    </style>
 </head>

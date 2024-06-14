@@ -88,7 +88,8 @@
 
   background-color:#fff;
    border-bottom-width:10px;
-  border-color:orange;
+  border-color: 3px solid orange;
+  border: 3px solid orange;
  }
 .hd{
 background: pink;
@@ -133,7 +134,10 @@ background: #064b35;
   background: #064b35;
 
 } 
-
+.fs-3 {
+         font-family: Spectral;
+ } 
+  
  </style>
  <script>
     function togglePasswordVisibility(cell) {

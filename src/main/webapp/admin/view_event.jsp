@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 h3{
-color:#f44336;
+   color: #e70ca9;
   font-family:  Calendas Plus;
 }
 .buttons {
