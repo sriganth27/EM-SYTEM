@@ -76,10 +76,10 @@
  .fa2{
       text-transform:capitalize;
          font-size: 35px;
-  color:#9698bc;
-  letter-spacing: 1px;
+  color: #94069c;
+
  font-family:  Calendas Plus;
-  text-shadow: 0px 1px 0px #ccc;
+
               
    
    }
@@ -134,7 +134,12 @@ color: #9698bc;
   font-family:  Calendas Plus;
 font-weight:200px;
  text-transform: capitalize;
-}    
+}
+
+.as input , 
+.as textarea {
+  font-family:  Calendas Plus;
+}  
  </style>
 </head>
 <body class="bg">

@@ -17,6 +17,7 @@
 <meta charset="ISO-8859-1">
 <title>Add Event</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <style type="text/css">
   
    
@@ -82,10 +83,10 @@
    .fa2{
       text-transform:capitalize;
          font-size: 35px;
-  color:#9698bc;
-  letter-spacing: 1px;
+  color: #94069c;
+
  font-family:  Calendas Plus;
-  text-shadow: 0px 1px 0px #ccc;
+ 
               
    
    }
@@ -137,7 +138,22 @@ font-weight:200px;
 .fs-3 {
          font-family: Spectral;
  } 
-  
+   .as input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
+  .as select{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
  </style>
 </head>
 <body class="bg">
@@ -158,12 +174,32 @@ font-weight:200px;
                 <div class="card-body">
 				   <form action="../addevent" method="post" class="row g-3" enctype="multipart/form-data">
 				      <c:if test="${not empty succMsg}">
-				      <P class="text-center text-white fs-3">${succMsg}</P>
+				         <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${succMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
+				    
 				      <c:remove var="succMsg" scope="session"/>
 				    </c:if>
 				   
 				   <c:if test="${not empty errorMsg}">
-				      <P class="text-center text-white fs-3">${errorMsg}</P>
+				     
+				      <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
 				   
@@ -191,7 +227,7 @@ font-weight:200px;
 				   <div class="as col-md-6">
 				   <label for="inputEmail4" class=" form-label">Event Category*</label>
 				   <select
-				     name="eventcategory" for="dropdown" class="form-control">
+				     name="eventcategory" for="dropdown" class="form-control" required >
 				   <option>---select---</option>
 				     <option value="Seminar">Seminar</option>
 				     <option value="Webinar">Webinar</option>

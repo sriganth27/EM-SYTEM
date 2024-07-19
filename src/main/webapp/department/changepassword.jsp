@@ -9,6 +9,7 @@
 <title>Password change</title>
 
  <%@include file="allcss.jsp" %>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <style type="text/css">
   
   .buttons {
@@ -148,12 +149,31 @@ font-size:20px;
 				   <p class="fa2  text-center">Change Password</p>
 				   
 				   <c:if test="${not empty sucMsg}">
-				      <P class="text-center text-primary fs-3">${sucMsg}</P>
+				     
+				       <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${sucMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="sucMsg" scope="session"/>
 				   </c:if>
 				   
 				   <c:if test="${not empty errorMsg}">
-				      <P class="text-center text-info fs-3">${errorMsg}</P>
+				      <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
 				    <div class="card">

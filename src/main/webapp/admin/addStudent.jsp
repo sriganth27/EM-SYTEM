@@ -16,6 +16,7 @@
 <meta charset="ISO-8859-1">
 <title>Student</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style type="text/css">
 
 .buttons {
@@ -99,7 +100,7 @@
   
     .p1{
  
-    text-transform:uppercase;
+     text-transform:capitalize;
 
    color: #e70ca9;
  
@@ -155,7 +156,22 @@ color: #fff;
 font-weight:200px;
  text-transform: capitalize;
 } 
-
+ .mb-3 input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
+  .mb-3 select{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
 .fs-3 {
          font-family: Spectral;
  } 
@@ -174,17 +190,35 @@ font-weight:200px;
                      <div class="col-md-4 offset-md-4">
 				
 						<p class="p1 fa2 fs-2 text-center">Add Student</p>
-						
 				   <c:if test="${not empty sucMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${sucMsg}</P>
+				      <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${sucMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="sucMsg" scope="session"/>
 				   </c:if>
 				   
 				   <c:if test="${not empty errorMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${errorMsg}</P>
+				      <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
-				   
+				
+
 				     <div class="card">
                      <div class="card-body">
 				  	<form action="../stdregister" method="post">

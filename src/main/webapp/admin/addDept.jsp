@@ -9,6 +9,7 @@
 <meta charset="ISO-8859-1">
 <title>Department</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style type="text/css">
 **{
   font-family:  Calendas Plus;
@@ -73,7 +74,7 @@
   
     .p1{
  
-   text-transform:uppercase;
+   text-transform:capitalize;
 
    color: #e70ca9;
  
@@ -130,7 +131,14 @@ color: #fff;
 font-weight:200px;
  text-transform: capitalize;
 } 
-
+ .mb-3 input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
 .fs-3 {
          font-family: Spectral;
  } 
@@ -143,58 +151,68 @@ font-weight:200px;
 	 
 				   <br>
 				   <br>
-				   <div class="project-container">
-				   	 <div class="container-fluid p-3 ">
-                     <div class="row">
-                     <div class="col-md-4 offset-md-4">
-				
-						<p class="p1 fa2 fs-2 text-center">Add Department</p>
-						
-				   <c:if test="${not empty sucMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${sucMsg}</P>
-				      <c:remove var="sucMsg" scope="session"/>
-				   </c:if>
-				   
-				   <c:if test="${not empty errorMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${errorMsg}</P>
-				      <c:remove var="errorMsg" scope="session"/>
-				   </c:if>
-				   
-				     <div class="card">
-                     <div class="card-body">
-				  	<form action="../deptregister" method="post">
-				   
-				   <div class="as mb-3">
-				   <label class="form-label">Full Name*</label><input type="text" required 
-				     name="fullname" class="form-control">
-				   </div>
-				   
-				    <div class="as mb-3">
-				   <label class="form-label">Email*</label><input type="email" required 
-				     name="email" class="form-control">
-				   </div>
-				   	   
-				    <div class="as mb-3">
-				   <label class="form-label">Password*</label><input type="password" required 
-				     name="password" class="form-control">
-				   </div>
-				   
-				   <div align="center">
-				   <button class="buttons btn-hover color-7" type = "submit" class="btn " >SUBMIT</button>
-				   </div>
-				   
-				   </form>
-					</div>
-				</div>
-					</div>
-				</div>
-			</div>
-      
-	</div>
-	
-       
-       
-   
+				<div class="project-container">
+  <div class="container-fluid p-3 ">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <p class="p1 fa2 fs-2 text-center">Add Department</p>
+        
+        <c:if test="${not empty sucMsg}">
+          <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${sucMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
+          <c:remove var="sucMsg" scope="session"/>
+        </c:if>
+        
+        <c:if test="${not empty errorMsg}">
+          <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
+          <c:remove var="errorMsg" scope="session"/>
+        </c:if>
+        
+        <div class="card">
+          <div class="card-body">
+            <form action="../deptregister" method="post">
+              <div class="as mb-3">
+                <label class="form-label">Full Name*</label>
+                <input type="text" required name="fullname" class="form-control">
+              </div>
+              
+              <div class="as mb-3">
+                <label class="form-label">Email*</label>
+                <input type="email" required name="email" class="form-control">
+              </div>
+              
+              <div class="as mb-3">
+                <label class="form-label">Password*</label>
+                <input type="password" required name="password" class="form-control">
+              </div>
+              
+              <div align="center">
+                <button class="buttons btn-hover color-7" type="submit" class="btn">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>   
 				   	
 				   	
 

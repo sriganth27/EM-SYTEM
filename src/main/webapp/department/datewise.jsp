@@ -20,6 +20,7 @@
 <meta charset="ISO-8859-1">
 <title>Event_details</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style type="text/css">
 
 
@@ -208,7 +209,36 @@ text-transform: capitalize;
 <div class="contact-container">
 
 <br>
- 					
+ 				 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all delete links with class 'delete-link'
+        const deleteLinks = document.querySelectorAll('.delete-link');
+
+        deleteLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const url = this.getAttribute('href');
+
+                // Show SweetAlert confirmation dialog
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You won\'t be able to revert this!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If confirmed, redirect to the deletion URL
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    });
+</script>
+              	
 		   <form action="datewise.jsp" method="post">
               <div align="center">
               <div class="col-sm-4 ">
@@ -309,7 +339,7 @@ else{%>
 		    			<td><%=rs.getString("description")%></td>
 		    			 <td><a href="edit_event.jsp?id=<%=rs.getInt("id")%>" class=" btn btn-sm btn1">Edit</a>
 					    
-					         <a href="../deleteEvent?id=<%=rs.getInt("id")%>" class=" btn btn-sm btn2">Delete</a>
+					         <a href="../deleteEvent?id=<%=rs.getInt("id")%>" class=" btn btn-sm btn2 delete-link">Delete</a>
 					          <a href="view_report.jsp?id=<%=rs.getInt("id")%>" class=" btn btn-sm btn3">Report</a>
 			                
 			           </td>

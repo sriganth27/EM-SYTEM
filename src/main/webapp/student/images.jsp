@@ -185,8 +185,8 @@ img.event-img {
         while (rs.next()) {
             eventsExist = true;
 %>
-        <img src="../addImage?id=<%=rs.getInt("id")%>" alt="image not found" class="event-img" data-id="<%=rs.getInt("id")%>" data-index="<%=serialNumber%>">
-        <img src="../addPhoto?id=<%=rs.getInt("id")%>" alt="image not found" class="event-img" data-id="<%=rs.getInt("id")%>" data-index="<%=serialNumber + 1%>">
+        <img src="../addImage?id=<%=rs.getInt("id")%>" alt="" class="event-img" data-id="<%=rs.getInt("id")%>" data-index="<%=serialNumber%>">
+        <img src="../addPhoto?id=<%=rs.getInt("id")%>" alt="" class="event-img" data-id="<%=rs.getInt("id")%>" data-index="<%=serialNumber + 1%>">
 <%
             serialNumber += 2;
         }

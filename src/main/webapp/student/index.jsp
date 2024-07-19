@@ -71,7 +71,7 @@ color:#f44336;
 
 
         .fa2{
-   text-transform:uppercase;
+  text-transform:capitalize;
       font-size: 30px;
   color: aqua;
   letter-spacing: 1px;
@@ -103,7 +103,7 @@ color:#f44336;
  background:#fff;
  border:50px;
  border-color:orange ;
-   letter-spacing: 1px;
+  
   font-family:  Calendas Plus;
  
 }

@@ -83,7 +83,7 @@
   
   .p1{
  
-   text-transform:uppercase;
+    text-transform:capitalize;
 
    color: #e70ca9;
  
@@ -139,6 +139,23 @@ color: #fff;
 font-weight:200px;
  text-transform: capitalize;
 } 
+
+ .mb-3 input{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
+  .mb-3 select{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
  </style>
 
 </head>

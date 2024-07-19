@@ -67,7 +67,7 @@ h3{
 
         .fa2{
   
-   text-transform:uppercase;
+     text-transform:capitalize;
 
    color: #e70ca9;
  

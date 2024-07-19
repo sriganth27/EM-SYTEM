@@ -15,6 +15,7 @@
 <meta charset="ISO-8859-1">
 <title>Department Details</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <style type="text/css">
        body{
   background:  #fff;
@@ -85,7 +86,7 @@
          
   .tab{
 
-
+  font-family:  Calendas Plus;
   background-color:#fff;
    border-bottom-width:10px;
   border-color: 3px solid orange;
@@ -97,7 +98,7 @@ text-transform: capitalize;
 }
    
     .ps{
-   text-transform:uppercase;
+   text-transform:capitalize;
 
    color: #e70ca9;
  
@@ -155,14 +156,60 @@ background: #064b35;
       
 	<div align="center">
 	<div class="col-md-8">
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all delete links with class 'delete-link'
+        const deleteLinks = document.querySelectorAll('.delete-link');
 
+        deleteLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const url = this.getAttribute('href');
+
+                // Show SweetAlert confirmation dialog
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You won\'t be able to revert this!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If confirmed, redirect to the deletion URL
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    });
+</script>
                	   <c:if test="${not empty sucMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${sucMsg}</P>
+				      <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${sucMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="sucMsg" scope="session"/>
 				   </c:if>
 				   
 				   <c:if test="${not empty errorMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${errorMsg}</P>
+				      <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
 				
@@ -200,7 +247,7 @@ background: #064b35;
                             </td>
 					    <td><a href="edit_dept.jsp?id=<%=ap.getId()%>" class=" btn btn-sm btn2">Edit</a>
 					    
-					         <a href="../deleteDept?id=<%=ap.getId()%>" class=" btn btn-sm btn3">Delete</a>
+					       <a href="../deleteDept?id=<%=ap.getId()%>" class="btn btn-sm btn3 delete-link">Delete</a>
 			                
 			           </td>
 					    

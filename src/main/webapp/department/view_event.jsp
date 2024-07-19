@@ -15,6 +15,7 @@
 <meta charset="ISO-8859-1">
 <title>Event Details</title>
 <%@include file="allcss.jsp" %>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <style type="text/css">
        body{
   background: #08030a;
@@ -139,12 +140,15 @@ text-transform: capitalize;
 }
    
     .ps{
-   text-transform:capitalize;
-   font-size: 35px;
-  color: #dcdd12;
-  letter-spacing: 1.5px;
-  font-family:  Calendas Plus;
+   text-transform:uppercase;
+   font-size: 27px;
+  color: #94069c;
+
+
+  letter-spacing: 1px;
+ font-family:  Calendas Plus;
   text-shadow: 0px 1px 0px #ccc;
+
               
    }  
  }
@@ -192,18 +196,66 @@ text-transform: capitalize;
 	<div align="center">
 	<div class="col-md-12">
 	<div id="tblCustomers">	
-				
+				  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Select all delete links with class 'delete-link'
+        const deleteLinks = document.querySelectorAll('.delete-link');
+
+        deleteLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const url = this.getAttribute('href');
+
+                // Show SweetAlert confirmation dialog
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You won\'t be able to revert this!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If confirmed, redirect to the deletion URL
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    });
+</script>
                	   <c:if test="${not empty sucMsg}">
-				      <P class="fs-2 text-center text-warning fs-3">${sucMsg}</P>
+				      
+				       <script>
+            Swal.fire({
+              title: 'Success!',
+              text: '${sucMsg}',
+              icon: 'success',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="sucMsg" scope="session"/>
 				   </c:if>
 				   
 				   <c:if test="${not empty errorMsg}">
-				      <P class="fs-3 text-center text-warning fs-3">${errorMsg}</P>
+				     
+				      <script>
+            Swal.fire({
+              title: 'Error!',
+              text: '${errorMsg}',
+              icon: 'error',
+              confirmButtonText: 'OK',
+                  width: '400px', // Customize width
+                  heightAuto: false ,// Disable automatic height adjustment
+            });
+          </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
 				   
-			   <p class="ps  text-center">Event Details List</p>
+			   <p class="ps  text-center">Event Details</p>
 			   <table class=" table table-striped table-bordered tab">
 			    <thead class="hd">
 			     <tr>
@@ -249,8 +301,8 @@ text-transform: capitalize;
 					    <td><%=ap.getDescription() %></td>
 					    <td><a href="edit_event.jsp?id=<%=ap.getId()%>" class=" btn btn-sm btn1">Edit</a>
 					    
-					         <a href="../deleteEvent?id=<%=ap.getId()%>" class=" btn btn-sm btn2" >Delete</a>
-					          <a href="view_report.jsp?id=<%=ap.getId()%>" class=" btn btn-sm btn3">Report</a>
+					         <a href="../deleteEvent?id=<%=ap.getId()%>" class=" btn btn-sm btn2 delete-link" >Delete</a>
+					          <a href="view_report.jsp?id=<%=ap.getId()%>" class=" btn btn-sm btn3 ">Report</a>
 					       
 			                
 			           </td>

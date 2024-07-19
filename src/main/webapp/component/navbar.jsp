@@ -10,7 +10,14 @@
 @font-face {
     font-family: 'Anydore';
     src: url('fonts/anydore.regular.otf') format('truetype');
+    /EMSFinal/src/main/webapp/fonts/
 }
+
+***{
+ font-family: cursive;
+  font-style :inherit;
+}
+
 .nav-item{
  padding: .2rem 2rem;
  font-size: 20px;
@@ -51,15 +58,24 @@ background :black;
  border-bottom: 2px solid #fff;
 }
 #navbarSupportedContent button{
+ font-family: cursive;
+  font-style :inherit;
     background:#2a96e0;
 }
    .dropdown-item{
    color:red;
+   font-family: cursive;
    background:#de2272;
    }
  .dropdown-menu a:hover{
-
+ 
 background:purple;
+}
+
+ .dropdown-menu a{
+ 
+ font-family: cursive;
+  font-style :inherit;
 }
  .bg3{
   background-color: #05012c;

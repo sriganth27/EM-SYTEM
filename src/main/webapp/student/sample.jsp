@@ -90,9 +90,10 @@
         .fa2{
    text-transform:uppercase;
       font-size: 30px;
- color: rgb(62, 25, 228);
+  color:  #df2387;
   letter-spacing: 1px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-family:  Calendas Plus;
+  text-shadow: 0px 1px 0px #ccc;
  
    }   
    .btn2{
