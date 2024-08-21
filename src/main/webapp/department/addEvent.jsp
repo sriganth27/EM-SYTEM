@@ -83,7 +83,7 @@
    .fa2{
       text-transform:capitalize;
          font-size: 35px;
-  color: #94069c;
+ color: #fff;
 
  font-family:  Calendas Plus;
  
@@ -91,7 +91,10 @@
    
    }
  .bg{
-  background:  #0c0225;
+ background-image: url(../icons/sri5.gif);
+
+ background-position:center;
+background-size: cover;
 
 }
 .contact-container::after,
@@ -100,7 +103,7 @@
   width: 28.125rem;
   height: 28.125rem;
   border-radius: 20.125rem;
-  background: #94069c;
+  background: #5006bf;
   position: absolute;
   z-index: -1;
   filter: blur(200px);
@@ -115,22 +118,23 @@
 .contact-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #6f069c;
+  background: #095abd;
   
 }
-    .card{
+    .back{
 
  border-radius: 10px;
-  box-shadow: 0 20px 40px #0c0225;
-  background:#10003a;
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
+  padding:15px;
+
+
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
 
 
 
    }
 .form-label{
-color: #9698bc;
+color: #fff;
   font-family:  Calendas Plus;
 font-weight:200px;
  text-transform: capitalize;
@@ -141,8 +145,8 @@ font-weight:200px;
    .as input{
   width: 100%;
   height: 40px;
-  border: none;
-  background:#efefef ;
+
+ 
  
      font-family:  Calendas Plus;
   }
@@ -168,10 +172,10 @@ font-weight:200px;
     
           <div class=" col-md-7 offset-md-3" >
 				 
-						<p class="fa2  text-center">Pre Register Event</p>
+						<p class="fa2  text-center"> Register Event</p>
 				
-				  <div class="card">
-                <div class="card-body">
+				  <div class="back">
+                <div class="">
 				   <form action="../addevent" method="post" class="row g-3" enctype="multipart/form-data">
 				      <c:if test="${not empty succMsg}">
 				         <script>

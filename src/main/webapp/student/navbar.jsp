@@ -36,11 +36,12 @@ background :black;
 }
 .navbar .navbar-brand
 {
-     font-size: 35px;
+    font-size: 25px;
     font-weight: 800;
-     color: #2c9e87;
-         font-family: 'Anydore';
-
+     color:#07be87;
+         font-family: cursive;
+  font-style :inherit;
+   
 }
 #navbarSupportedContent a{
     color: #fff;

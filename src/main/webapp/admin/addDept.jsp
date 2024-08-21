@@ -76,7 +76,7 @@
  
    text-transform:capitalize;
 
-   color: #e70ca9;
+   color: #fff;
  
     font-family: Spectral;
    letter-spacing: 1px;
@@ -84,22 +84,32 @@
    }
    
     
-      .card{
+      .back{
+
+ border-radius: 10px;
+  padding:15px;
 
 
-  
-   border-radius: 10px;
-  box-shadow: 0 20px 40px #0c0225;
-  background:#10003a;
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
-   } 
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
+
+
+
+   }
+   .form-label{
+color: #fff;
+ font-family:  Calendas Plus;
+font-weight:200px;
+ text-transform: capitalize;
+} 
    
  .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
- 
-  } 
+}
 .project-container::after,
 .project-container::before {
   content: "";
@@ -107,7 +117,7 @@
   height: 28.125rem;
   border-radius: 20.125rem;
 
-background: #064b35;
+background: #1c03ac;
   position:absolute;
   z-index: -10;
   filter: blur(200px);
@@ -121,16 +131,11 @@ background: #064b35;
   .project-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #064b35;
+  background:#1c03ac;
 
 } 
 
-.form-label{
-color: #fff;
-  font-family:  Calendas Plus;
-font-weight:200px;
- text-transform: capitalize;
-} 
+
  .mb-3 input{
   width: 100%;
   height: 40px;
@@ -185,8 +190,8 @@ font-weight:200px;
           <c:remove var="errorMsg" scope="session"/>
         </c:if>
         
-        <div class="card">
-          <div class="card-body">
+        <div class="back">
+          <div class="">
             <form action="../deptregister" method="post">
               <div class="as mb-3">
                 <label class="form-label">Full Name*</label>

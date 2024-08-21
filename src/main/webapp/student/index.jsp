@@ -111,16 +111,13 @@ color:#f44336;
 background:pink ;
 text-transform: capitalize;
 }
-  body{
-  margin: 0;
-    padding: 0;
-    height: 100vh; /* Make sure the body covers the entire viewport height */
-    
-    background-size: cover; /* Ensure the background covers the entire body */
-    background-position: center; /* Center the background */
-    background-color: #05012c;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  } 
+ .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
+
+}
 .project-container::after,
 .project-container::before {
   content: "";
@@ -131,7 +128,7 @@ text-transform: capitalize;
   background: #150364;
   position:absolute;
   z-index: -10;
-  filter: blur(200px);
+  filter: blur(240px);
 }
 
 .project-container::after {
@@ -142,7 +139,7 @@ text-transform: capitalize;
   .project-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #6f069c;
+  background: #1506bf;
 }    
           .btn3 {
             background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);

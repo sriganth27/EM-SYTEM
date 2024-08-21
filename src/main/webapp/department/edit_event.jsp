@@ -73,26 +73,22 @@
    font-weight: 450;
    
    }
- .fa2{
+   .fa2{
       text-transform:capitalize;
          font-size: 35px;
-  color: #94069c;
+color: #fff;
 
  font-family:  Calendas Plus;
-
+ 
               
    
    }
-  .bg{
-   background:#10003a;
+ .bg{
+ background-image: url(../icons/sri5.gif);
 
+ background-position:center;
+background-size: cover;
 
- margin: 0;
-    padding: 0;
-   /* Make sure the body covers the entire viewport height */
-    
-    background-size: cover; /* Ensure the background covers the entire body */
-    background-position: center; 
 }
 .contact-container::after,
 .contact-container::before {
@@ -109,32 +105,34 @@
 .contact-container::after {
   top: -3rem;
   left: -5rem;
+   background: #095abd;
 
 }
 
 .contact-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #6f069c;
+  background: #94069c;
   
 }
-    .card{
+    .back{
 
  border-radius: 10px;
-  box-shadow: 0 20px 40px #0c0225;
-  background:#10003a;
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
+  padding:15px;
+
+
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
 
 
 
    }
 .form-label{
-color: #9698bc;
+color: #fff;
   font-family:  Calendas Plus;
 font-weight:200px;
  text-transform: capitalize;
-}
+} 
 
 .as input , 
 .as textarea {
@@ -160,8 +158,8 @@ font-weight:200px;
 				   EventDao dao2= new EventDao(DBconnect.getConn());
 				   event d = dao2.getEventById(id);
 				   %>
-				     <div class="card">
-                <div class="card-body">
+				     <div class="back">
+                <div class="">
 				   <form action="../update_event" method="post" class="row g-3" enctype="multipart/form-data">
 				      
 				   

@@ -10,26 +10,35 @@
 
  <%@include file="allcss.jsp" %>
  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
- <style type="text/css">
+  <style type="text/css">
   
-  .buttons {
-    margin: 10%;
-    text-align: center;
+   
+  
+ 
+   .clink{
+   text-decoration:none;
+   }
+
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.buttons {
+..buttons {
     margin: 10%;
     text-align: center;
 }
 
 .btn-hover {
-    width: 150px;
+    width: 200px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 45px;
+    height: 55px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -56,39 +65,30 @@
     background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
+           
    
-     .bg{
-  background:#10003a;
-   }
- 
-    .fa2{
-   text-transform:uppercase;
-      font-size: 30px;
- 
-  letter-spacing: 1.5px;
-  color: #9698bc;
-  font-family:  Calendas Plus;
-  
-   } 
-   .btn{
-   display : inline-block;
-   text-decoration:none;
-   border:1px solid #fff;
-  
-   position:relative;
-  color:#fff;
-  background: linear-gradient(to right , #5543ca , #a72879);
-  
-   cursor: pointer;
+   .as{
+    font-size: 20px;
+   font-weight: 450;
    
    }
-   .btn :hover{
-   border:1px solid #f44336;
-    transition : 1s;
-    background: #f44336;
-   }  
+   .fa2{
+      text-transform:capitalize;
+         font-size: 35px;
+color: #fff;
 
+ font-family:  Calendas Plus;
+ 
+              
+   
+   }
+ .bg{
+  background-image: url(../icons/sri.gif);
+height: 100vh;
+ background-position:center;
+background-size: cover;
 
+}
 .contact-container::after,
 .contact-container::before {
   content: "";
@@ -113,30 +113,47 @@
   background: #6f069c;
   
 }
-    .card{
+    .back{
 
  border-radius: 10px;
-  box-shadow: 0 20px 40px #0c0225;
-  background:#10003a;
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
+  padding:15px;
+
+
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
 
 
 
    }
 .form-label{
-color: #9698bc;
+color: #fff;
   font-family:  Calendas Plus;
 font-weight:200px;
 font-size:20px;
  text-transform: capitalize;
-}  
-  body{
-  background: #0a0c27;
 } 
-   </style>
+.fs-3 {
+         font-family: Spectral;
+ } 
+   .as input{
+  width: 100%;
+  height: 40px;
+font-size:20px;
+ 
+ 
+     font-family:  Calendas Plus;
+  }
+  .as select{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
+ </style>
 </head>
-<body >
+<body class="bg">
 	  <%@include file="navbar.jsp"%>
 	 <c:if test="${empty deptObj }">
 	<c:redirect url="../department_login.jsp" ></c:redirect> 
@@ -176,8 +193,8 @@ font-size:20px;
           </script>
 				      <c:remove var="errorMsg" scope="session"/>
 				   </c:if>
-				    <div class="card">
-                    <div class="card-body">
+				    <div class="back">
+                    <div class="">
 				   	<form action="../changePassword" method="post">
 						<div class ="mb-3">
 							<label class="form-label">Your Old Password</label>

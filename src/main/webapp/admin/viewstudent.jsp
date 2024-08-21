@@ -21,17 +21,8 @@
   background:  #fff;
  
   } 
-  .tab{
-background-color:#fff;
-  border-color:orange;
-  border: 3px solid orange;
-    font-family:  Calendas Plus;
- }
-.hd{
-background: pink;
-text-transform: capitalize;
-}
-           .btn1 {
+  
+         .btn1 {
             background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
             margin: 10px;
             padding: 15px 45px;
@@ -92,22 +83,36 @@ text-transform: capitalize;
             color: #fff;
             text-decoration: none;
           }
-          
+         
+  .tab{
+
+  font-family:  Calendas Plus;
+  background-color:#fff;
+   border-bottom-width:10px;
+  border-color: 3px solid orange;
+  border: 3px solid orange;
+ }
+.hd{
+background: pink;
+text-transform: capitalize;
+}
+   
     .ps{
-      text-transform:capitalize;
+   text-transform:capitalize;
 
    color: #e70ca9;
  
-  font-family:  Calendas Plus;
-   letter-spacing: 1px;
-   
+    font-family: Spectral;
+ 
    } 
    
  .bg{
+  background-image: url(../icons/sri5.gif);
 
-    background-color: #05012c;
- 
-  } 
+ background-position:center;
+background-size: cover;
+
+}
 .project-container::after,
 .project-container::before {
   content: "";
@@ -115,7 +120,7 @@ text-transform: capitalize;
   height: 28.125rem;
   border-radius: 20.125rem;
 
-background: #064b35;
+background: #0355ac;
   position:absolute;
   z-index: -10;
   filter: blur(200px);
@@ -129,15 +134,21 @@ background: #064b35;
   .project-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #064b35;
+  background: #0355ac;
 
 } 
 .fs-3 {
          font-family: Spectral;
-         
  } 
-        
+  
  </style>
+ <script>
+    function togglePasswordVisibility(cell) {
+        var password = cell.innerText;
+        cell.innerText = cell.getAttribute('data-password');
+        cell.setAttribute('data-password', password);
+    }
+</script>
   <script>
     function togglePasswordVisibility(cell) {
         var password = cell.innerText;

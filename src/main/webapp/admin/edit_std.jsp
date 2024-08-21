@@ -15,15 +15,13 @@
 <title>Student details</title>
 <%@include file="allcss.jsp" %>
 <style type="text/css">
-  * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+**{
+  font-family:  Calendas Plus;
 }
-
 .buttons {
     margin: 10%;
     text-align: center;
+    
 }
 
 .btn-hover {
@@ -57,7 +55,7 @@
     outline: none;
 }
   .btn-hover.color-7 {
-    background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
+            background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC  51%, #02AAB0  100%);
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
    
@@ -65,15 +63,12 @@
     .paint-card{
    box-shadow: 0 0 10px 0 rgba(0, 0,0, .3);
    }
-   .bg{
-   background:#fff;
-   }
+   
    .clink{
    text-decoration:none;
    }
   
-  
-  
+
    .as{
     font-size: 20px;
    font-weight: 600;
@@ -81,35 +76,44 @@
    }
   
   
- .p1{
+    .p1{
  
-    text-transform:capitalize;
+   text-transform:capitalize;
 
-   color: #e70ca9;
+   color: #fff;
  
     font-family: Spectral;
    letter-spacing: 1px;
    
    }
    
-   
-      .card{
+    
+      .back{
 
 
-  
-   border-radius: 10px;
-  box-shadow: 0 20px 40px #0c0225;
-  background:#10003a;
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
-   } 
-   
+  padding:15px;
+
+
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
+
+
+
+   }
+   .form-label{
+color: #fff;
+ font-family:  Calendas Plus;
+font-weight:200px;
+ text-transform: capitalize;
+} 
    
  .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
- 
-  } 
+}
 .project-container::after,
 .project-container::before {
   content: "";
@@ -117,7 +121,7 @@
   height: 28.125rem;
   border-radius: 20.125rem;
 
-background: #064b35;
+background: #1c03ac;
   position:absolute;
   z-index: -10;
   filter: blur(200px);
@@ -131,16 +135,10 @@ background: #064b35;
   .project-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #064b35;
+  background:#1c03ac;
 
 } 
 
-.form-label{
-color: #fff;
-  font-family:  Calendas Plus;
-font-weight:200px;
- text-transform: capitalize;
-} 
 
  .mb-3 input{
   width: 100%;
@@ -150,16 +148,11 @@ font-weight:200px;
  
      font-family:  Calendas Plus;
   }
-  .mb-3 select{
-  width: 100%;
-  height: 40px;
-  border: none;
-  background:#efefef ;
- 
-     font-family:  Calendas Plus;
-  } 
+.fs-3 {
+         font-family: Spectral;
+ } 
+   
  </style>
-
 </head>
 <body class="bg">
 
@@ -181,24 +174,24 @@ font-weight:200px;
 				   StudentDao dao2= new StudentDao(DBconnect.getConn());
 				   student d = dao2.getStdById(id);
 				   %>
-				       <div class="card">
-                     <div class="card-body">
+				       <div class="back">
+                     <div class="">
 				  	<form action="../updateStd" method="post">
 				   
 				   <div class="as mb-3">
-				   <label class="form-label">Full Name</label>
+				   <label class="form-label">Full Name*</label>
 				   	   <input value="<%=d.getFullname()%>" type="text" required 
 				     name="fullname" class="form-control">
 			
 				   </div>
 				   
 				    <div class="as mb-3">
-				   <label class="form-label">Email</label><input value="<%=d.getEmail()%>" type="email" required 
+				   <label class="form-label">Email*</label><input value="<%=d.getEmail()%>" type="email" required 
 				     name="email" class="form-control">
 				   </div>
 				   	   
 				    <div class="as mb-3">
-				   <label class="form-label">Password</label><input value="<%=d.getPassword()%>" type="text" required 
+				   <label class="form-label">Password*</label><input value="<%=d.getPassword()%>" type="text" required 
 				     name="password" class="form-control">
 				   </div>
 				   <input type="hidden" name="id" value="<%=d.getId()%>">

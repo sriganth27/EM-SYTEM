@@ -83,7 +83,7 @@
    text-transform:capitalize;
       font-size: 35px;
       
-  color:  #df2387;
+color: #fff;
   letter-spacing: 1px;
  font-family:  Calendas Plus;
 
@@ -122,16 +122,12 @@ background:pink ;
 text-transform: capitalize;
 }
 
-  .bg{
- background: #3a0463;
+.bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-
- margin: 0;
-    padding: 0;
-   /* Make sure the body covers the entire viewport height */
-    
-    background-size: cover; /* Ensure the background covers the entire body */
-    background-position: center; 
 }
 .contact-container::after,
 .contact-container::before {

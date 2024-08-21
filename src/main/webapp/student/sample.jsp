@@ -130,11 +130,13 @@ background:pink ;
 text-transform: capitalize;
 }
 
-  body{
+ .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  } 
+}
 .project-container::after,
 .project-container::before {
   content: "";

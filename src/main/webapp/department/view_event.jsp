@@ -152,8 +152,11 @@ text-transform: capitalize;
               
    }  
  }
- .bg{
-  background: #08030a;
+.bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
 }
 .contact-container::after,

@@ -101,11 +101,13 @@ background-color:#fff;
 background:pink ;
 text-transform: capitalize;
 }
- .bg{
+  .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
- 
-  } 
+}
 .project-container::after,
 .project-container::before {
   content: "";

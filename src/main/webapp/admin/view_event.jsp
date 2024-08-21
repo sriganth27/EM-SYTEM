@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 h3{
-   color: #e70ca9;
+   color: #fff;
   font-family:  Calendas Plus;
 }
 .buttons {
@@ -69,7 +69,7 @@ h3{
   
      text-transform:capitalize;
 
-   color: #e70ca9;
+   color: #fff;
  
     font-family: Spectral;
    letter-spacing: 1px;
@@ -108,10 +108,12 @@ background:pink ;
 text-transform: capitalize;
 }
  .bg{
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
- 
-  } 
+}
 .project-container::after,
 .project-container::before {
   content: "";

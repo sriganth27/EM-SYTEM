@@ -106,11 +106,13 @@ text-transform: capitalize;
  
    } 
    
-.bg{
+ .bg{
+  background-image: url(../icons/sri5.gif);
 
-    background-color: #05012c;
- 
-  } 
+ background-position:center;
+background-size: cover;
+
+}
 .project-container::after,
 .project-container::before {
   content: "";
@@ -118,7 +120,7 @@ text-transform: capitalize;
   height: 28.125rem;
   border-radius: 20.125rem;
 
-background: #064b35;
+background: #0355ac;
   position:absolute;
   z-index: -10;
   filter: blur(200px);
@@ -132,7 +134,7 @@ background: #064b35;
   .project-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #064b35;
+  background: #0355ac;
 
 } 
 .fs-3 {

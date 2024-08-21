@@ -17,10 +17,15 @@
 <meta charset="ISO-8859-1">
 <title>Feed Back</title>
 <%@include file="allcss.jsp" %>
- <style type="text/css">
+  <style type="text/css">
   
    
   
+ 
+   .clink{
+   text-decoration:none;
+   }
+
 
   * {
     -webkit-box-sizing: border-box;
@@ -28,19 +33,19 @@
     box-sizing: border-box;
 }
 
-.buttons {
+..buttons {
     margin: 10%;
     text-align: center;
 }
 
 .btn-hover {
-    width: 150px;
+    width: 200px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 45px;
+    height: 55px;
     text-align:center;
     border: none;
     background-size: 300% 100%;
@@ -67,6 +72,7 @@
     background-image: linear-gradient(to right, #6253e1, #852D91, #A3A1FF, #F24645);
     box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }
+           
    
    .as{
     font-size: 20px;
@@ -74,59 +80,83 @@
    
    }
    .fa2{
-      text-transform:uppercase;
-      font-size: 30px;
-  color:#dcdd12;
-  font-family:  Calendas Plus;
-  letter-spacing: 1.5px;
+      text-transform:capitalize;
+         font-size: 35px;
+ color: #fff;
+
+ font-family:  Calendas Plus;
+ 
+              
    
    }
  .bg{
+  background-image: url(../icons/sri9.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
-    background-color: #05012c;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  } 
-.project-container::after,
-.project-container::before {
+}
+.contact-container::after,
+.contact-container::before {
   content: "";
   width: 28.125rem;
   height: 28.125rem;
   border-radius: 20.125rem;
-
-  background: #150364;
-  position:absolute;
-  z-index: -10;
-  filter: blur(200px);
+  background: #3b07bec2;
+  position: absolute;
+  z-index: -1;
+  filter: blur(250px);
 }
 
-.project-container::after {
+.contact-container::after {
   top: -3rem;
   left: -5rem;
 
 }
-  .project-container::before {
+
+.contact-container::before {
   bottom:0rem;
   right: 0rem;
-  background: #6f069c;
-}       
-     
- 
-    .card{
-    border-radius:10px;
- box-shadow: 0 20px 40px rgb(0,0,0);
-  background: rgb(1,44,128);
-   border-radius: 0.5rem;
-    border: 1.5px solid rgb(12, 88, 220);
+  background: #3507be;
+  
+}
+    .back{
+
+ border-radius: 10px;
+  padding:15px;
+
+
+   border-radius: 0.2rem;
+    border: 2px solid #d4afc7;
 
 
 
    }
 .form-label{
-color: #9698bc;
+color: #fff;
   font-family:  Calendas Plus;
 font-weight:200px;
  text-transform: capitalize;
 } 
+.fs-3 {
+         font-family: Spectral;
+ } 
+   .as input{
+  width: 100%;
+  height: 40px;
+
+ 
+ 
+     font-family:  Calendas Plus;
+  }
+  .as select{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background:#efefef ;
+ 
+     font-family:  Calendas Plus;
+  }
  </style>
 </head>
 <body class="bg">
@@ -135,20 +165,20 @@ font-weight:200px;
 	<c:redirect url="../department_login.jsp" ></c:redirect> 
  </c:if>
  
-   <div class="container-fluid p-3 project-container">
+   <div class="container-fluid p-3 contact-container">
     <div class="row">
     
           <div class=" col-md-6 offset-md-3" >
 				
-						<p class="fa2 fs-3 text-center">Feedback</p>
+						<p class="fa2 fs-2 text-center">Student Feedback</p>
 						
 				   <%
 				   int id = Integer.parseInt(request.getParameter("id"));
 				   EventDao dao2= new EventDao(DBconnect.getConn());
 				   event d = dao2.getEventById(id);
 				   %>
-				     <div class="card" >
-                <div class="card-body">
+				     <div class="back" >
+                <div class="">
 				   <form action="../feedback" method="post" class="row g-3" enctype="multipart/form-data">
 				      
 				   

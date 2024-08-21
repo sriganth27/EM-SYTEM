@@ -110,7 +110,10 @@ text-transform: capitalize;
 }
 
 .bg{
-  background-color: #05012c;
+  background-image: url(../icons/sri5.gif);
+height:100vh;
+ background-position:center;
+background-size: cover;
 
 }
 .contact-container::after,
@@ -122,7 +125,7 @@ text-transform: capitalize;
   background: #94069c;
   position: absolute;
   z-index: -1;
-  filter: blur(130px);
+  filter: blur(230px);
 }
 
 .contact-container::after {
